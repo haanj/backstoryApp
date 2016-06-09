@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="App">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Lora|Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="./css/base.css" >
-    <link rel="stylesheet" href="./css/module-landing.css" >
-    <link rel="stylesheet" href="./css/module-main.css" >
-    <link rel="stylesheet" href="./css/module-header.css" >
-    <title>Story Blocks</title>
+    <link rel="stylesheet" href="./css/style.css" >
+    <title>Character Generator</title>
   </head>
-  <body ng-app="App">
+  <body>
+    <custom-header><h1>hello header</h1></custom-header>
     <h1>Hello world</h1>
+    <div ng-init="words='words words words'">
+      <p>{words}</p>
+    </div>
     <script type="text/javascript" src="bundle.js"></script>
   </body>
 </html>
