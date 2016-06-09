@@ -1,0 +1,39 @@
+<section ng-init="mainctrl.getStories()" ng-controller="MainController as mainctrl" class="cube-container">
+  <section class="cube-holder" ng-repeat="story in mainctrl.stories" >
+    <input type="radio" class="radio-button" checked id="radio-front" name="select-face"/>
+    <input type="radio" class="radio-button" id="radio-right" name="select-face"/>
+    <input type="radio" class="radio-button" id="radio-left" name="select-face"/>
+    <!-- <input type="radio" class="radio-button" id="radio-top" name="select-face"/> -->
+    <!-- <input type="radio" class="radio-button" id="radio-bottom" name="select-face"/> -->
+    <!-- <input type="radio" class="radio-button" id="radio-back" name="select-face"/> -->
+
+    <div class="separator"></div>
+
+    <div ng-class="mainctrl.spaceCubeStyle" class="space3d" >
+
+
+      <div ng-class="mainctrl.boxCubeStyle" class="_3dbox" >
+        <div class="_3dface _3dface--front" ><img ng-click="mainctrl.expandImage(story)" class="story-image" src="{{story.imgUrl}}" alt="" /></div>
+        <div class="_3dface _3dface--top" ng-click="mainctrl.expandArticle(story)"></br></br>{{story.title}}</div>
+        <div class="_3dface _3dface--bottom" ng-click="mainctrl.expandArticle(story)">{{story.description}}</div>
+        <div class="_3dface _3dface--left"></div>
+        <div class="_3dface _3dface--right"></div>
+        <div class="_3dface _3dface--back"></div>
+      </div>
+
+    </div>
+
+    <section ng-class="{'expanded-article-active' : story.toggleArticle, 'expanded-article' : !story.toggleArticle}" ng-click="mainctrl.expandArticle(story)">
+      <h3>{{story.title}}</h3>
+      <p>
+        {{story.description}}
+      </p>
+    </section>
+    <section ng-class="{'expanded-image-active' : story.toggleImage, 'expanded-image' : !story.toggleImage}" ng-click="mainctrl.expandImage(story)">
+      <div class="image-container">
+        <img class="image" src="{{story.imgUrl}}" alt="" />
+      </div>
+    </section>
+    <br><br>
+  </section>
+</section>
