@@ -3,6 +3,6 @@ angular.module('HeaderModule', [])
     return {
       restrict: 'E',
       replace: true,
-      templateUrl: '.templates/header-view.html'
+      templateUrl: './templates/header-view.html'
     };   
   });

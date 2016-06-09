@@ -6,7 +6,7 @@ let del = require('del');
 
 
 let jsPaths = ['dev/**/*.js']
-let htmlPaths = ['dev/*.html']
+let htmlPaths = ['dev/**/*.html']
 let scssPaths = ['dev/scss/*.scss']
 let mediaPaths = ['dev/media/*']
 let output = __dirname + '/public/'
