@@ -1,3 +1,23 @@
 body {
-	background-color: blue;
+	background-color: lightgray;
+}
+
+.storyContainer {
+	margin: 0 auto;
+	width: 40%;
+	div {
+		line-height: 10%;
+		padding: 0 1em;
+		border: 1px solid black;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		h3 {
+		}
+	}
+	button {
+		display: block;
+		margin: 0 auto;
+	}
+
 }

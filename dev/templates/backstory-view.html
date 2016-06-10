@@ -1,0 +1,8 @@
+<section class="storyContainer" ng-init="storyctrl.getBackstory()" ng-controller="BackstoryController as storyctrl">
+  <div ng-repeat="item in storyctrl.backstory">
+    <h3>{{item.title}}:</h3>
+    <p>{{item.value}}</p>
+  </div>
+  <button ng-click="storyctrl.getBackstory()">Randomize</button>
+
+</section>
