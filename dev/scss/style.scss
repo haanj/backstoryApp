@@ -1,16 +1,19 @@
-/* Background images from subtlepatterns.com */
+/* Background tile images from subtlepatterns.com */
+/* Photographs from unsplash.com */
+
 $stone: url('../media/ravenna.png');
+$bwcastle: url('../media/bwcastle.jpg');
+$castle: url('../media/castle.jpg');
 
 body {
 	background-color: white;
 	background-image: $stone;
 }
-
 .storyContainer {
 	background-color: lightgray;
 	border: solid 1px black;
 	border-radius: 10px;
-	margin: 0 auto;
+	margin: 5vh auto 20vh;
 	width: 40%;
 	div {
 		line-height: 10%;
@@ -20,6 +23,8 @@ body {
 		align-items: baseline;
 		h3 {
 		}
+		p {
+		}
 	}
 	button {
 		display: block;
@@ -28,4 +33,32 @@ body {
 		border: none;
 	}
 
+}
+header {
+	min-height: 45vh;
+	background-image: $bwcastle;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	.header-container {
+		width: 100%;
+		background-color: rgba(0,0,0,0.4);
+
+		h1 {
+			text-align: center;
+			$shadow: rgba(0,0,0,0.4);
+			border-radius: 15px;
+			margin: 0 auto;
+			padding: 0.3em;
+			text-shadow:  1px  1px $shadow
+								 ,  1px -1px $shadow
+								 , -1px  1px $shadow
+								 , -1px -1px $shadow;
+			color: white;
+		}
+	
+	}
 }
