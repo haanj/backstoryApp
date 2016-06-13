@@ -39,12 +39,13 @@ header {
 	background-image: $bwcastle;
 	background-size: cover;
 	background-position: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
 
 	.header-container {
 		width: 100%;
+		min-height: 45vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 		background-color: rgba(0,0,0,0.4);
 
 		h1 {
