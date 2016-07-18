@@ -14,10 +14,11 @@ body {
 	border: solid 1px black;
 	border-radius: 10px;
 	margin: 5vh auto 20vh;
-	width: 40%;
+	width: 80%;
+	@media (min-width: 1000px) {
+		width: 40%;
+	}
 	min-height: 45vh;
-	
-	
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -36,7 +37,12 @@ body {
 	border: solid 1px black;
 	border-radius: 10px;
 	margin: 5vh auto 20vh;
-	width: 40%;
+	width: 80%;
+	@media (min-width: 1000px) {
+		width: 40%;
+	}
+
+
 	div {
 		line-height: 10%;
 		padding: 0 1em;
@@ -72,15 +78,16 @@ header {
 		background-color: rgba(0,0,0,0.4);
 
 		h1 {
+			background-color: rgba(0,0,0,1);
+			width:100%;
 			text-align: center;
-			$shadow: rgba(0,0,0,0.4);
-			border-radius: 15px;
+			/*$shadow: rgba(0,0,0,0.4);*/
 			margin: 0 auto;
 			padding: 0.3em;
-			text-shadow:  1px  1px $shadow
-								 ,  1px -1px $shadow
-								 , -1px  1px $shadow
-								 , -1px -1px $shadow;
+			/*text-shadow:  1px  1px $shadow*/
+								 /*,  1px -1px $shadow*/
+								 /*, -1px  1px $shadow*/
+								 /*, -1px -1px $shadow;*/
 			color: white;
 		}
 	
