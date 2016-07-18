@@ -1,5 +1,8 @@
-angular.module('BackstoryModule', [])
-  .controller('BackstoryController', ['$http', BackstoryController])
+var app = angular.module('BackstoryModule', []);
+require('../services/generator_service.js')(app);
+
+app
+  .controller('BackstoryController', ['GeneratorService', BackstoryController])
   .directive('backstory', function() {
     return {
       restrict: 'E',
@@ -8,16 +11,11 @@ angular.module('BackstoryModule', [])
     };
   });
 
-function BackstoryController ($http) {
+function BackstoryController (generator) {
   let backstoryRoute = 'http://localhost:3000/stories';
   this.backstory = [];
 
   this.getBackstory = function() {
-    $http.get(backstoryRoute)
-      .then((results) => {
-        this.backstory = results.data;
-      }, (err) => {
-        console.log('error');
-      })
+    this.backstory = generator.getStory();
   };
 }
