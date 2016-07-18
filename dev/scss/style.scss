@@ -22,8 +22,11 @@ body {
 	border-radius: 10px;
 	margin: 5vh auto 20vh;
 	padding: 2em;
-	width: 80%;
 	line-height: 150%;
+	width: 100%;
+	@media (min-width: 400px) {
+		width: 80%;
+	}
 	@media (min-width: 1000px) {
 		width: 40%;
 	}
@@ -50,7 +53,10 @@ body {
 	border: solid 1px black;
 	border-radius: 10px;
 	margin: 5vh auto 20vh;
-	width: 80%;
+	width: 100%;
+	@media (min-width: 400px) {
+		width: 80%;
+	}
 	@media (min-width: 1000px) {
 		width: 40%;
 	}
@@ -77,14 +83,20 @@ body {
 
 }
 header {
-	min-height: 45vh;
+	min-height: 40vh;
+	@media (min-width: 1000px) {
+		min-height: 45vh;
+	}
 	background-image: $bwcastle;
 	background-size: cover;
 	background-position: center;
 
 	.header-container {
 		width: 100%;
-		min-height: 45vh;
+		min-height: 40vh;
+		@media (min-width: 1000px) {
+			min-height: 45vh;
+		}
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -96,7 +108,7 @@ header {
 			text-align: center;
 			/*$shadow: rgba(0,0,0,0.4);*/
 			margin: 0 auto;
-			padding: 0.3em;
+			padding: 0.7em;
 			/*text-shadow:  1px  1px $shadow*/
 								 /*,  1px -1px $shadow*/
 								 /*, -1px  1px $shadow*/
