@@ -8,6 +8,7 @@ module.exports = function(app) {
     
     // retrieves story from service
     myService.getStory = function() {
+      // TODO: improve generator logic
       return require('./generator')();
     } 
 
